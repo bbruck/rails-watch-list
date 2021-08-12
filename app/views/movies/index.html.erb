@@ -1,0 +1,10 @@
+<div class="container">
+  <br>
+  <h1>List of favorite movies</h1>
+  <br>
+  <ul>
+    <% @movies.each do |movie| %>
+    <li><%= link_to movie.title, movie_path(movie) %></li>
+    <% end %>
+  </ul>
+</div>
