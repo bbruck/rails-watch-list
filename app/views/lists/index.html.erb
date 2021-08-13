@@ -1,0 +1,15 @@
+<div class="home-banner">
+  <h1>Watch list</h1>
+</div>
+
+<div class="container">
+  <br>
+  <h1>Your movie lists</h1>
+  <br>
+  <ul>
+    <% @lists.each do |list|%>
+    <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+  <%= link_to "Create new list", new_list_path %>
+</div>
